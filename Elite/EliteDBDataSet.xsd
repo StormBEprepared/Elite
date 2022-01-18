@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EliteDBDataSet" targetNamespace="http://tempuri.org/EliteDBDataSet.xsd" xmlns:mstns="http://tempuri.org/EliteDBDataSet.xsd" xmlns="http://tempuri.org/EliteDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EliteDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EliteDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Elite.Properties.Settings.GlobalReference.Default.EliteDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataForEveryUserTableAdapter" GeneratorDataComponentClassName="DataForEveryUserTableAdapter" Name="DataForEveryUser" UserDataComponentName="DataForEveryUserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EliteDBConnectionString (Settings)" DbObjectName="EliteDB.dbo.DataForEveryUser" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TypeOfTransaction, Amount, Time FROM dbo.DataForEveryUser</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TypeOfTransaction" DataSetColumn="TypeOfTransaction" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="Time" DataSetColumn="Time" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EliteDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EliteDBDataSet" msprop:Generator_DataSetName="EliteDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataForEveryUser" msprop:Generator_RowEvHandlerName="DataForEveryUserRowChangeEventHandler" msprop:Generator_RowDeletedName="DataForEveryUserRowDeleted" msprop:Generator_RowDeletingName="DataForEveryUserRowDeleting" msprop:Generator_RowEvArgName="DataForEveryUserRowChangeEvent" msprop:Generator_TablePropName="DataForEveryUser" msprop:Generator_RowChangedName="DataForEveryUserRowChanged" msprop:Generator_RowChangingName="DataForEveryUserRowChanging" msprop:Generator_TableClassName="DataForEveryUserDataTable" msprop:Generator_RowClassName="DataForEveryUserRow" msprop:Generator_TableVarName="tableDataForEveryUser" msprop:Generator_UserTableName="DataForEveryUser">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TypeOfTransaction" msprop:Generator_ColumnPropNameInRow="TypeOfTransaction" msprop:Generator_ColumnPropNameInTable="TypeOfTransactionColumn" msprop:Generator_ColumnVarNameInTable="columnTypeOfTransaction" msprop:Generator_UserColumnName="TypeOfTransaction">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_UserColumnName="Amount">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Time" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_UserColumnName="Time">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
